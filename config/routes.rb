@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'tasks#index'
 
-  resources :tasks, only: [:index, :edit, :show, :new, :create]
+  resources :tasks
   resources :users, only: [:index, :show, :create]
 
   get 'sessions/new'
