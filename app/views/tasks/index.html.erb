@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-sm-4">
+    <div class="col-sm-4">
       <%= form_with(model: @task, local: true) do |f| %>
         <div class="form-group">
           <%= f.label :content, '▼タスク' %>
@@ -10,7 +10,7 @@
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
-    </aside>
+    </div>
     <div class="col-sm-8">
       <%= render 'tasks/tasks', tasks: @tasks %>
     </div>
