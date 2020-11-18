@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'tasks#index'
 
   resources :tasks
-  resources :users, only: [:index, :show, :create]
+  resources :users, only: [:create]
 
   get 'sessions/new'
   get 'sessions/create'
